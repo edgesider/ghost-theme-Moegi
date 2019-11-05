@@ -1,71 +1,6 @@
 # Moegi「萌黄」 - 一个优雅有趣的Ghost主题
 
-> Introducing our new [Moegi.Design](http://moegi.design)
-
-## 共同设计 Moegi 2!
-
-一个新的 Moegi 工程正在进行中。点击下方链接查看最新进度&出谋划策
-
-[Let's Begin Moegi 2](https://github.com/ddiu8081/ghost-theme-Moegi/issues/15)
-
-## 介绍
-
-[博客介绍页](https://blog.ddiu.site/ghost-theme-moegi/)
-
-陆陆续续跟风玩过不少的博客= =...从 Wordpress 转到 Typecho 再到现在的 Ghost..
-试过 Ghost 之后发现嗯，好，是我想要的，于是就这么留下来了...
-
-Ghost 0.x版本默认的 Casper 十分好看，可惜1.0版本之后就改成 cms 样式了...
-所以抽了点时间自己写了一套，起名为 Moegi 。
-
-### 特性
-
-* 自定义配置（详见 主题配置）
-* 标签云
-* 归档页
-* 文章目录
-* 评论功能
-* 按标题搜索
-* 主题色更改
-
-[Features Todo List](https://github.com/ddiu8081/ghost-theme-Moegi/issues/2)
-
-### Screenshot & Demo
-
-![index](http://cloud.ddiu.site/18-8-7/69498520.jpg)
-![article](https://ws1.sinaimg.cn/large/695ceddbly1fvq6jvjejrj228019mjz8.jpg)
-
-> 本站准备了一篇主题样式测试的文章，展示了长文排版、文字样式等效果，欢迎访问
->  
-> [主题样式测试](https://blog.ddiu.site/theme-test/)  
-> [博客Demo](https://blog.ddiu.site)
-
-## 更新日志
-
-* 2017.10.02 v1.0.0 Moegi主题完成
-* 2018.02.16 v1.1.0 添加代码高亮
-* 2018.05.23 v1.2.0 使用[Typo.css](https://typo.sofi.sh/)重构了页面的行距等样式；代码高亮更换为[Highlight.js](https://highlightjs.org/)；背景改为#ffffff；超链接、强调色、引用等其他样式更改
-* 2018.05.24 v1.3.0 添加归档页；细节优化
-* 2018.05.24 v1.4.0 添加文章目录
-* 2018.05.25 v1.4.1 标签云支持显示为独立页面
-* 2018.05.26 v1.4.2 添加404页面
-* 2018.05.26 v1.5.0 添加评论功能
-* 2018.05.27 v1.5.1 修复在非https站下无法加载库文件的bug
-* 2018.05.28 v1.6.0 添加文章搜索功能；新增多个配置项以控制功能的开启
-* 2018.05.30 v1.7.0 支持显示作者信息，默认隐藏；完善作者页面
-* 2018.07.13 v1.7.1 增加针对首页标签云的配置项([#5](https://github.com/ddiu8081/ghost-theme-Moegi/issues/5))；支持footer第二行的自定义，请在Code injection中配置
-* 2018.07.27 v1.7.2 修正针对 Valine 的 CSS 样式
-* 2018.08.07 v1.8.0 主色调支持在Code injection中配置；修改了超链接部分的样式
-* 2018.08.08 v1.9.0 增加网页加载进度条；修复文章目录console报错的问题([#3](https://github.com/ddiu8081/ghost-theme-Moegi/issues/3))；修复上一版本带来的bug
-* 2018.08.23 v1.9.1 适配 Ghost 2.0
-* 2018.09.13 v1.9.2 更改 js 加载结构
-* 2018.09.28 v1.9.3 样式微调
-* 2018.09.30 v1.9.4 fix #8
-* 2018.10.02 v1.9.5 取消依赖 BootCDN 公共库
-* 2018.10.09 v1.9.6 修改 figcaption 样式 (#9)
-* 2018.12.19 v1.10.0 增加内页导航栏；样式微调；修复作者页bug；fix #11
-* 2019.03.06 v1.10.1 修复新版 Ghost 无法获取归档的问题 (#19)
-* 2019.06.17 v1.10.2 作者页头像显示 (#26)
+*forked from moegi-design/ghost-theme-Moegi*
 
 ## 下载与使用
 
@@ -82,12 +17,17 @@ Ghost 0.x版本默认的 Casper 十分好看，可惜1.0版本之后就改成 cm
 然后进入 Ghost 后台 - Code injection，在`Blog Header`中插入以下代码：
 
 ```
+<style>
+    /* 隐藏文章底部作者信息，注释掉此段取消隐藏 */
+    .author-card {
+        display: none;
+    }
+</style>
 <script>
     var main_color = '#86B81B'; //主色调，默认为#86B81B
     var show_search = true; //是否开启搜索功能，默认为true
     var show_toc = true; //是否开启文章目录，默认为true
     var show_valine = true; //是否开启评论功能，默认为true
-    var show_author = false; //是否开启文章底部作者信息，默认为false
     var show_index_tag = true; //是否开启首页底部标签云，默认为true
     
     //要开启评论功能需正确填写lc_appId与lc_appKey，并保证show_valine为true
