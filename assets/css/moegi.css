@@ -281,6 +281,11 @@ a:hover {
     position: relative;
     color: var(--main-color);
     padding-bottom: 3px;
+
+    background: url('/assets/images/link.png') no-repeat 100% 20%;
+    background-size: 10px 10px;
+    padding-right: 13px;
+    margin-right: 4px;
 }
 
 .single-post a:hover, .typo a:hover {
