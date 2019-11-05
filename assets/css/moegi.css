@@ -53,7 +53,7 @@ a:hover {
     float: left;
 }
 
-.post-nav li > a {
+.post-nav li>a {
     margin: 0 4px;
 }
 
@@ -66,7 +66,7 @@ a:hover {
     border: none;
 }
 
-.post-nav ul > li:not(:last-child)::after {
+.post-nav ul>li:not(:last-child)::after {
     content: '·';
 }
 
@@ -244,7 +244,6 @@ a:hover {
     line-height: 2.2;
 }
 
-
 /* READ MORE */
 
 .post-readmore {
@@ -281,7 +280,6 @@ a:hover {
     position: relative;
     color: var(--main-color);
     padding-bottom: 3px;
-
     background: url('/assets/images/link.png') no-repeat 100% 20%;
     background-size: 10px 10px;
     padding-right: 13px;
@@ -362,6 +360,7 @@ a:hover {
 
 .typo a {
     border-bottom: none;
+    color: gray;
 }
 
 .typo h2 {
@@ -409,31 +408,33 @@ pre {
     max-width: 1040px;
     width: 100vw;
 }
- .kg-gallery-row {
+
+.kg-gallery-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
- .kg-gallery-image img {
+
+.kg-gallery-image img {
     display: block;
     margin: 0;
     width: 100%;
     height: 100%;
 }
- .kg-gallery-row:not(:first-of-type) {
+
+.kg-gallery-row:not(:first-of-type) {
     margin: 0.75em 0 0 0;
 }
- .kg-gallery-image:not(:first-of-type) {
+
+.kg-gallery-image:not(:first-of-type) {
     margin: 0 0 0 0.75em;
 }
 
-.kg-image-card,
-.kg-gallery-card {
+.kg-image-card, .kg-gallery-card {
     margin: 0 0 1.5em;
 }
 
-.kg-image-card figcaption,
-.kg-gallery-card figcaption {
+.kg-image-card figcaption, .kg-gallery-card figcaption {
     margin: 0.8em 0 1.4em;
     text-align: center;
     font-size: 0.85em;
@@ -528,8 +529,6 @@ pre {
     color: var(--main-color);
 }
 
-
-
 /* FOOTER */
 
 .blog-footer {
@@ -557,6 +556,7 @@ pre {
 }
 
 /* TOC */
+
 #toc {
     position: fixed;
     left: 50%;
@@ -597,6 +597,7 @@ pre {
 }
 
 /* VALINE PATCH */
+
 #comment {
     margin-top: 3.2em;
     position: relative;
@@ -756,29 +757,31 @@ pre {
 }
 
 /* GITMENT PATCH */
+
 #comment-box .gt-container .gt-svg svg {
     fill: #666666;
 }
 
 /* LOADING BAR */
+
 /* Make clicks pass-through */
+
 #nprogress {
     pointer-events: none;
 }
-  
+
 #nprogress .bar {
     background: var(--main-color);
-  
     position: fixed;
     z-index: 1031;
     top: 0;
     left: 0;
-  
     width: 100%;
     height: 2px;
 }
-  
+
 /* Fancy blur effect */
+
 #nprogress .peg {
     display: block;
     position: absolute;
@@ -787,13 +790,13 @@ pre {
     height: 100%;
     box-shadow: 0 0 10px var(--main-color), 0 0 5px var(--main-color);
     opacity: 1.0;
-  
     -webkit-transform: rotate(3deg) translate(0px, -4px);
     -ms-transform: rotate(3deg) translate(0px, -4px);
     transform: rotate(3deg) translate(0px, -4px);
 }
-  
+
 /* Remove these to get rid of the spinner */
+
 #nprogress .spinner {
     display: block;
     position: fixed;
@@ -801,38 +804,44 @@ pre {
     top: 15px;
     right: 15px;
 }
-  
+
 #nprogress .spinner-icon {
     width: 18px;
     height: 18px;
     box-sizing: border-box;
-  
     border: solid 2px transparent;
     border-top-color: var(--main-color);
     border-left-color: var(--main-color);
     border-radius: 50%;
-  
     -webkit-animation: nprogress-spinner 400ms linear infinite;
     animation: nprogress-spinner 400ms linear infinite;
 }
-  
+
 .nprogress-custom-parent {
     overflow: hidden;
     position: relative;
 }
-  
-.nprogress-custom-parent #nprogress .spinner,
-.nprogress-custom-parent #nprogress .bar {
+
+.nprogress-custom-parent #nprogress .spinner, .nprogress-custom-parent #nprogress .bar {
     position: absolute;
 }
-  
+
 @-webkit-keyframes nprogress-spinner {
-    0%   { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
+
 @keyframes nprogress-spinner {
-    0%   { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* GO TO TOP */
@@ -860,6 +869,7 @@ pre {
 }
 
 /* ARCHIVES & SEARCH */
+
 #archives-list time {
     color: #666666;
 }
@@ -920,7 +930,6 @@ pre {
     text-align: justify;
 }
 
-
 /* TYPOGRAPHY */
 
 .container {
@@ -933,21 +942,17 @@ pre {
     .container {
         width: 90%;
     }
-
     .typo h2::before {
         position: relative;
         left: 0;
     }
-
     #comment .comment-header::before {
         position: relative;
         left: 0;
     }
-
     #comment .vwrap .vheader.item2 .vinput, #comment .vwrap .vheader .vinput {
         width: 100%;
     }
-
     #toc {
         display: none;
     }
@@ -961,7 +966,8 @@ pre {
 }
 
 /* KEYFRAMES */
-@keyframes left-in{
+
+@keyframes left-in {
     0% {
         opacity: 0;
         transform: translateX(-10px);

@@ -16,19 +16,31 @@
 
 然后进入 Ghost 后台 - Code injection，在`Blog Header`中插入以下代码：
 
-```
+```html
 <style>
-    /* 隐藏文章底部作者信息，注释掉此段取消隐藏 */
-    .author-card {
+    /* 隐藏文章底部作者信息卡片，注释掉此段取消隐藏 */
+    .post-footer .author-card {
+        display: none;
+    }
+    /* 隐藏文章底部标签云，注释掉此段取消隐藏 */
+    .post-footer .tags {
+        display: none;
+    }
+    
+    /* 隐藏主页搜索功能，注释掉此段取消隐藏 */
+    .search-bar {
         display: none;
     }
 </style>
 <script>
-    var main_color = '#86B81B'; //主色调，默认为#86B81B
-    var show_search = true; //是否开启搜索功能，默认为true
+    /* 原主题使用js控制这几个组件的显示与否，网速慢时会有加载延迟，导致不想显示的组件显示出来。改成css好点。
+    //var show_search = false; //是否开启搜索功能，默认为true
+    //var show_author = false; //是否开启文章底部作者信息，默认为false
+    //var show_index_tag = true; //是否开启首页底部标签云，默认为true
+    */
+    var main_color = '#242424'; //主色调，默认为#242424
     var show_toc = true; //是否开启文章目录，默认为true
-    var show_valine = true; //是否开启评论功能，默认为true
-    var show_index_tag = true; //是否开启首页底部标签云，默认为true
+    var show_valine = false; //是否开启评论功能，默认为true
     
     //要开启评论功能需正确填写lc_appId与lc_appKey，并保证show_valine为true
     var lc_appId = '这里填上面获得的appid';
