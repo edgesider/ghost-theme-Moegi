@@ -4,7 +4,7 @@
     "keywords": [
         "ghost-theme"
     ],
-    "version": "1.10.2",
+    "version": "2.0.0",
     "engines": {
         "ghost": ">=1.0.0",
         "ghost-api": "v2"
@@ -18,5 +18,5 @@
     "config": {
         "posts_per_page": 8
     },
-    "homepage": "https://github.com/ddiu8081/ghost-theme-Moegi"
+    "homepage": "https://github.com/edgesider/ghost-theme-Moegi"
 }
